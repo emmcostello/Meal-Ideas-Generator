@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Meal Ideas</title>
+    <link rel="stylesheet" href="meal-ideas.css" />
+    <script defer src="meal-ideas.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <main>
+      <h1>Meal Idea Generator</h1>
+      <!--I want a form where i can filter by dietary need eg vegetarian and also select a key ingredient from a drop down. -->
+      <p class="tagline">
+        Find your next delicious meal • Click cards to see ingredients
+      </p>
+
+      <form class="search-form">
+        <label for="ingredient">Search by Ingredient</label>
+        <input
+          id="ingredient"
+          name="ingredient"
+          type="text"
+          placeholder="e.g. tofu"
+          required
+        />
+
+        <label for="diet">Meal Type</label>
+        <select id="diet" name="diet">
+          <option value="any">Any</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="gluten free">Gluten Free</option>
+        </select>
+
+        <button type="submit" class="search-submit">Search</button>
+      </form>
+
+      <p class="status hidden"></p>
+
+      <!-- my meal results will go here -->
+      <section class="results hidden">
+        <div class="meal-list">
+          <p>the meals will go here</p>
+          <img src="images/food-placeholder.jpeg" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
