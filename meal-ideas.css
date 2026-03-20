@@ -15,7 +15,11 @@ body {
   padding: 20px;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  background-color: rgb(249, 241, 230);
+
+  background: linear-gradient(180deg, #f4f0e8, #f1e9d2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 /* ---------------- TEXT ---------------- */
@@ -65,7 +69,7 @@ p {
 .search-form button {
   padding: 8px;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 16px;
   border: 2px solid #393939;
   height: 44px;
 }
@@ -86,7 +90,7 @@ p {
 .meal-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -94,9 +98,17 @@ p {
 
 .meal-card {
   width: 260px;
-  height: 180px;
+  height: 260px;
   perspective: 1000px;
   cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.meal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .meal-card-inner {
@@ -127,7 +139,7 @@ p {
 /* FRONT */
 .meal-card-front img {
   width: 100%;
-  height: 120px;
+  height: 180px;
   object-fit: cover;
 }
 
