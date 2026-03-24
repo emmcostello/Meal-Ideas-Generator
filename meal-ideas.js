@@ -174,6 +174,13 @@ function toggleIngredientsOnCard(card, ingredients) {
     return;
   }
 
+  // create container
+  const container = document.createElement("div");
+
+  // create heading
+  const heading = document.createElement("h4");
+  heading.textContent = "Ingredients";
+
   // otherwise create it the first time
   const list = document.createElement("ul");
   list.classList.add("ingredients");
@@ -184,9 +191,13 @@ function toggleIngredientsOnCard(card, ingredients) {
     list.appendChild(li);
   });
 
+  // append heading + list
+  container.appendChild(heading);
+  container.appendChild(list);
+
   const back = card.querySelector(".meal-card-back");
   back.innerHTML = "";
-  back.appendChild(list);
+  back.appendChild(container);
 }
 
 // ------------------------------------
